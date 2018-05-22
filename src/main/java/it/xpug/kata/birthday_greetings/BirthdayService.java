@@ -15,8 +15,8 @@ import javax.mail.internet.MimeMessage;
 
 public class BirthdayService {
 
-	public void sendGreetings(String fileName, String smtpHost, int smtpPort) throws IOException, ParseException, AddressException, MessagingException {
-		BufferedReader in = new BufferedReader(new FileReader(fileName));
+	public void sendGreetings(String smtpHost, int smtpPort) throws IOException, ParseException, AddressException, MessagingException {
+        BufferedReader in = new BufferedReader(new FileReader(Data.fileName));
 		String str = "";
 		str = in.readLine(); // skip header
 		while ((str = in.readLine()) != null) {
